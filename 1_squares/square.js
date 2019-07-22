@@ -7,12 +7,12 @@ class Square {
     this.size = 60;
   }
 
-  update() {
-    this.x = 100 * sin(this.angle);
-    this.y = 100 * cos(this.angle);
-    this.angle += 0.01;
+  update(offX, offY) {
+    this.x = 12 * sin(this.angle + offX);
+    this.y = 12 * cos(this.angle + offY);
+    this.angle += 0.05;
   }
-  show(s) {
-    rect(this.x + s, this.y, this.size, this.size * 0.69)
+  show(sX, sY) {
+    rect(this.x + sX, this.y + sY, this.size, this.size * 0.69)
   }
 }
